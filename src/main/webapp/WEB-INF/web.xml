@@ -1,13 +1,13 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
 
-<web-app>
   <display-name>Archetype Created Web Application</display-name>
   
   <servlet>
     <servlet-name>UploadServlet</servlet-name>
-    <display-name>UploadServlet</display-name>
     <servlet-class>com.skynet.servlet.UploadServlet</servlet-class>
   </servlet>
   
@@ -15,5 +15,35 @@
     <servlet-name>UploadServlet</servlet-name>
     <url-pattern>/Upload</url-pattern>
   </servlet-mapping>
-  
+
+  <servlet>
+    <servlet-name>LoginAction</servlet-name>
+    <servlet-class>com.skynet.action.LoginAction</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginAction</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegisterAction</servlet-name>
+    <servlet-class>com.skynet.action.RegisterAction</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RegisterAction</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LogoutAction</servlet-name>
+    <servlet-class>com.skynet.action.LogoutAction</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LogoutAction</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+
 </web-app>

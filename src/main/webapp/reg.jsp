@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form action="doReg.jsp" method="post">
+<form action="Register" method="post">
 
     账号：<input type="text" name="username"><br>
     密码：<input type="text" name="password"><br>

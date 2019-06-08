@@ -1,6 +1,7 @@
 package com.skynet.action;
 
 import com.skynet.dao.JspConnect;
+import com.skynet.user.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +13,7 @@ public class UserAction {
     private String username;
     private String password;
 
-    private int age;
+    private String age;
     private String sex;
     private String phone;
 
@@ -22,17 +23,12 @@ public class UserAction {
 
     private String sql;
 
-    public UserAction(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public UserAction(String username, String password, int age, String sex, String phone) {
-        this.username = username;
-        this.password = password;
-        this.age = age;
-        this.sex = sex;
-        this.phone = phone;
+    public UserAction(User user) {
+        this.username = user.getUsername();
+        this.password = user.getPassword();
+        this.age = user.getAge();
+        this.sex = user.getSex();
+        this.phone = user.getPhone();
     }
 
     public boolean login() {
@@ -68,10 +64,6 @@ public class UserAction {
             e.printStackTrace();
         }
         return false;
-    }
-
-    public boolean logout() {
-        return true;
     }
 
     private ResultSet getConnection() {

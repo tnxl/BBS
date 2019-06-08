@@ -11,7 +11,7 @@
     <title>用户登录</title>
 </head>
 <body>
-<form action="doLog.jsp" method="post" name="form1">
+<form action="Login" method="post" name="form1">
     账号：<input type="text" name="username"><br>
     密码：<input type="text" name="password"><br>
     <input type="submit" value="登录">
